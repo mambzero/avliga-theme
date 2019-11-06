@@ -1,0 +1,24 @@
+---
+---
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.site {
+    @include center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #eee;
+    .content {
+        @include center;
+        flex-wrap: wrap;
+    }
+}
