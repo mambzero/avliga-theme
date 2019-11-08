@@ -22,11 +22,10 @@ title: Avliga Theme
 email: stoianov@saita.me
 description: >- # this means to ignore newlines until "baseurl:"
   The theme is for Avliga Books online shop.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/avliga-theme" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 facebook_username: mambzero
 github_username:  mambzero
-repo: avliga-theme
 
 # Build settings
 #theme: minima
