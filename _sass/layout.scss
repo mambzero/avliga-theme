@@ -1,0 +1,44 @@
+.inner-wrapper {
+    display: flex;
+    width: $layout-width;
+}
+
+.site {
+    display: flex;
+    flex-flow: column wrap;
+    min-height: 100vh;
+}
+
+.header, .content, .footer {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    padding: 0.5em;
+    .inner-wrapper {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .title {
+        padding-bottom: 0;
+    }
+    .nav ul {
+        display: flex;
+        padding-bottom: 0;
+    }
+    .nav li {
+        margin: 0 0.5em;
+    }
+    .nav a {
+        display: block;
+        padding: 0.5em;
+    }
+}
+
+.content {
+    flex-grow: 1;
+    .inner-wrapper {
+        flex-flow: column wrap;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ site.title }}}</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="site">
+        <header class="header">
+            <div class="inner-wrapper">
+                <h1 class="title">{{ site.title }}</h1>
+                <nav class="nav">
+                    <ul>
+                        {% assign pages = site.pages | sort: 'order' %}
+                        {% for page in pages %}
+                        {% if page.title %}
+                        <li>
+                            <a href="{{ page.url }}">{{ page.title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="content">
+            <div class="inner-wrapper">
+                {{ content }}
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="inner-wrapper">
+                <p>All rights reserved &copy 2019</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
