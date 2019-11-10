@@ -27,6 +27,15 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 facebook_username: mambzero
 github_username:  mambzero
 
+#collections
+collections:
+  books:
+    output: true
+  authors:
+    output: true
+
+collections_dir: collections
+
 # Build settings
 #theme: minima
 plugins:
