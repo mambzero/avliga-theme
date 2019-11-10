@@ -6,3 +6,12 @@ order: 2
 ---
 
 <h2>Books</h2>
+
+<div class="books">
+{% for book in site.books %}
+    <div class="book">
+        <h3>{{ book.title }}</h3>
+        <a href="{{ site.baseurl }}{{ book.url }}">view</a>
+    </div>
+{% endfor %}
+</div>

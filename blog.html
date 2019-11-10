@@ -6,3 +6,11 @@ order: 4
 ---
 
 <h2>Blog</h2>
+
+<div class="blog">
+{% for post in site.posts %}
+    <article class="post">
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </article>
+{% endfor %}
+</div>

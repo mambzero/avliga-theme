@@ -6,3 +6,12 @@ order: 3
 ---
 
 <h2>Authors</h2>
+
+<div class="authors">
+{% for author in site.authors %}
+    <div class="author">
+        <h3>{{ author.name }}</h3>
+        <a href="{{ site.baseurl }}{{ author.url }}">view</a>
+    </div>
+{% endfor %}
+</div>
