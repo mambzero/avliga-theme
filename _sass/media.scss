@@ -1,0 +1,8 @@
+@media screen and (max-width: 1000px)  {
+    .inner-wrapper {
+        width: $layout-width-max-1000;
+    }
+    .header, .footer {
+        padding: 0 1em;
+    }
+}

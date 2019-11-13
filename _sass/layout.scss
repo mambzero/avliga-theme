@@ -15,29 +15,53 @@
 }
 
 .header {
-    padding: 0.5em;
+    background-color: $header-bg;
+    font-size: 0.8em;
     .inner-wrapper {
         justify-content: space-between;
         align-items: center;
     }
-    .title {
-        padding-bottom: 0;
+    .brand {
+        display: flex;
+        .logo {
+            display: block;
+            width: 10em;
+            background: #333;
+            padding: 0.5em;
+            margin-bottom: -0.5em;
+            border-bottom-left-radius: 0.5em;
+            border-bottom-right-radius: 0.5em;
+        }
+        h1.title {
+            color: #333;
+            margin-left: 0.5em;
+            padding-bottom: 0;
+            display: flex;
+            align-items: center;
+            font-size: 1.2em;
+        }
     }
     .nav ul {
         display: flex;
         padding-bottom: 0;
     }
     .nav li {
-        margin: 0 0.5em;
+        margin: 0 0.3em;
     }
     .nav a {
         display: block;
-        padding: 0.5em;
+        color: #333;
+        padding: 0.8em 0.5em;
+        font-weight: 600;
+        &:hover {
+            color: #000;
+        }
     }
 }
 
 .content {
     flex-grow: 1;
+    padding: 1em;
     .inner-wrapper {
         flex-flow: column wrap;
     }

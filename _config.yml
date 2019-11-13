@@ -36,6 +36,8 @@ collections:
 
 collections_dir: collections
 
+font-awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.css
+
 # Build settings
 #theme: minima
 plugins:
