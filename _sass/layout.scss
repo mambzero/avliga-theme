@@ -23,6 +23,7 @@
     }
     .brand {
         display: flex;
+        z-index: 10;
         .logo {
             display: block;
             width: 10em;
@@ -46,16 +47,33 @@
         padding-bottom: 0;
     }
     .nav li {
+        display: block;
         margin: 0 0.3em;
     }
-    .nav a {
+    .nav a, .toggle-menu-button {
         display: block;
         color: #333;
         padding: 0.8em 0.5em;
         font-weight: 600;
         &:hover {
             color: #000;
+            transition: 0.3s ease-in;
         }
+    }
+    .nav a i {
+        width: 1.2em;
+        height: auto;
+    }
+    .nav .toggle-menu-button {
+        display: none;
+    }
+    .nav > .toggle-menu-checkbox:checked + ul {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+    }
+    .nav .toggle-menu-checkbox {
+        display: none;
     }
 }
 

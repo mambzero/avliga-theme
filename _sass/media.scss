@@ -6,3 +6,31 @@
         padding: 0 1em;
     }
 }
+
+@media screen and (max-width: 648px) {
+    .header {
+        position: relative;
+        z-index: 10;
+        .brand h1.title {
+            font-size: 1.1em;
+        }
+        .nav {
+            .toggle-menu-button {
+                display: block;
+            }
+            ul {
+                display: none;
+                padding: 0.5em;
+                position: absolute;
+                left: 50%;
+                width: 100%;
+                font-size: 1.2em;
+                background: $header-bg;
+                li a {
+                    padding-top: 0.5em;
+                    padding-bottom: 0.5em;
+                }
+            }
+        }
+    }
+}
