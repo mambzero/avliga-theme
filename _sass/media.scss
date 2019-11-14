@@ -10,9 +10,6 @@
 @media screen and (max-width: 648px) {
     .header {
         position: relative;
-        .brand h1.title {
-            font-size: 1.1em;
-        }
         .nav {
             .toggle-menu-button {
                 display: block;
@@ -22,15 +19,22 @@
                 padding: 0.5em;
                 position: absolute;
                 top: 100%;
-                left: 50%;
-                width: 100%;
-                font-size: 1.2em;
+                right: 0;
                 background: $header-bg;
                 li a {
+                    font-size: 1.2em;
                     padding-top: 0.5em;
                     padding-bottom: 0.5em;
                 }
             }
+        }
+        .nav a i {
+            width: 1.2em;
+            height: auto;
+        }
+        .nav > .toggle-menu-checkbox:checked + ul {
+            display: flex;
+            flex-direction: column;
         }
     }
 }

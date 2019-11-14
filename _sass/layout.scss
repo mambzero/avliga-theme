@@ -60,16 +60,8 @@
             transition: 0.3s ease-in;
         }
     }
-    .nav a i {
-        width: 1.2em;
-        height: auto;
-    }
     .nav .toggle-menu-button {
         display: none;
-    }
-    .nav > .toggle-menu-checkbox:checked + ul {
-        display: flex;
-        flex-direction: column;
     }
     .nav .toggle-menu-checkbox {
         display: none;
