@@ -70,7 +70,6 @@
     .nav > .toggle-menu-checkbox:checked + ul {
         display: flex;
         flex-direction: column;
-        z-index: 1;
     }
     .nav .toggle-menu-checkbox {
         display: none;
