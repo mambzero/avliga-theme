@@ -1,6 +1,6 @@
-@media screen and (max-width: 1000px)  {
+@media screen and (max-width: 976px)  {
     .inner-wrapper {
-        width: $layout-width-max-1000;
+        width: $layout-full-width;
     }
     .header, .footer {
         padding: 0 1em;
@@ -21,6 +21,7 @@
                 top: 100%;
                 right: 0;
                 background: $header-bg;
+                z-index: 10;
                 li a {
                     font-size: 1.2em;
                     padding-top: 0.5em;

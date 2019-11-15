@@ -17,10 +17,7 @@ icon: blog
         <section class="title">
             <h3>{{ post.title }}</h3>
         </section>
-        <section class="excerpt">
-            {{ post.excerpt }}
-        </section>
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more"><span>Read more</span></a>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more"><i class="fa fa-angle-double-right"></i></a>
     </article>
 {% endfor %}
 </div>

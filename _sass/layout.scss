@@ -72,6 +72,6 @@
     flex-grow: 1;
     padding: 1em;
     .inner-wrapper {
-        flex-flow: column wrap;
+        flex-direction: column;
     }
 }
