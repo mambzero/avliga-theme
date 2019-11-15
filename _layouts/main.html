@@ -14,7 +14,10 @@
         <header class="header">
             <div class="inner-wrapper">
                 <div class="brand">
-                    <img src="{{ site.data.images['logo'] }}" alt="logo" class="logo">
+                    <div class="logo">
+                        <img src="{{ site.data.images['logo'] }}" alt="logo">
+                        <a href="{{ site.base.url }}/"></a>
+                    </div>
                     <h1 class="title">{{ site.title }}</h1>
                 </div>
                 <nav class="nav">
@@ -40,7 +43,9 @@
         </main>
         <footer class="footer">
             <div class="inner-wrapper">
-                <p>All rights reserved &copy 2019</p>
+                <section class="bottom">
+                    <p>All rights reserved &copy 2019</p>
+                </section>
             </div>
         </footer>
     </div>

@@ -26,12 +26,22 @@
         z-index: 10;
         .logo {
             display: block;
-            width: 10em;
             background: #333;
-            padding: 0.5em;
             margin-bottom: -0.5em;
             border-bottom-left-radius: 0.5em;
             border-bottom-right-radius: 0.5em;
+            position: relative;
+        }
+        .logo img {
+            width: 10em;
+            padding: 0.5em;
+        }
+        .logo a {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
         }
         h1.title {
             color: #333;
@@ -73,5 +83,13 @@
     padding: 1em;
     .inner-wrapper {
         flex-direction: column;
+    }
+}
+
+.footer {
+    background-color: #333;
+    .bottom p {
+        padding: 1em 0;
+        color: #fff;
     }
 }
