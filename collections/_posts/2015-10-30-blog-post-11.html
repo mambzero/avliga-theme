@@ -1,0 +1,20 @@
+---
+index: 11
+layout: main
+date: 2015-10-30 15:11:11 +0200
+categories: blog
+---
+
+{% assign page_index = page.index | minus: 1 %}
+
+<article class="blog-post">
+
+  <header>
+    <h2>{{ site.data.posts.rss.channel.item[page_index].title }}</h2>
+  </header>
+
+  <section>
+    {{ site.data.posts.rss.channel.item[page_index].encoded.__cdata }}
+  </section>
+
+</article>
