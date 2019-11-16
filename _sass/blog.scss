@@ -17,7 +17,7 @@
         .image:after {
             display: block;
             content: '';
-            padding-top: 56.25%
+            padding-top: $post-image-ratio;
         }
         .image img {
             display: block;
@@ -30,10 +30,13 @@
         }
         .title {
             background: #000;
+            height: 100%;
         }
         .title h3 {
             padding: 0.5em;
             color: #fff;
+            font-size: 1em;
+            font-weight: normal;
         }
         a {
             display: flex;
@@ -49,6 +52,9 @@
             i {
                 padding: 0.3em;
             }
+        }
+        &:hover .image img {
+            animation: post-thumb-hover 0.3s both;
         }
     }
     &:before, &:after{
