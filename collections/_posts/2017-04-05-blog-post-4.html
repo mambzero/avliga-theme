@@ -1,20 +1,10 @@
 ---
 index: 4
-layout: main
+layout: single-post
 date: 2017-04-05 +0200
 categories: blog
 ---
 
 {% assign page_index = page.index | minus: 1 %}
 
-<article class="blog-post">
-
-  <header>
-    <h2>{{ site.data.posts.rss.channel.item[page_index].title }}</h2>
-  </header>
-
-  <section>
-    {{ site.data.posts.rss.channel.item[page_index].encoded.__cdata }}
-  </section>
-
-</article>
+{{ site.data.posts.rss.channel.item[page_index].encoded.__cdata }}
