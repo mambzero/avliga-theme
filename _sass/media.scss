@@ -29,10 +29,6 @@
                 }
             }
         }
-        .nav a i {
-            width: 1.2em;
-            height: auto;
-        }
         .nav > .toggle-menu-checkbox:checked + ul {
             display: flex;
             flex-direction: column;
