@@ -1,39 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ site.title }}</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ site.font-awesome }}">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
-</head>
+{% include head.html %}
 <body>
     <div class="site">
         <header class="header">
             <div class="inner-wrapper">
-                <div class="brand">
-                    <div class="logo">
-                        <img src="{{ site.data.images['logo'] }}" alt="logo">
-                        <a href="{{ site.base.url }}/">&nbsp;</a>
-                    </div>
-                    <h1 class="title">{{ site.title }}</h1>
-                </div>
-                <nav class="nav">
-                    <label for="toggle-menu-button" class="toggle-menu-button"><i class="fa fa-bars"></i></label>
-                    <input id="toggle-menu-button" class="toggle-menu-checkbox" type="checkbox">
-                    <ul>
-                        {% assign pages = site.pages | sort: 'order' %}
-                        {% for page in pages %}
-                        {% if page.title %}
-                        <li>
-                            <a href="{{ site.baseurl }}{{ page.url }}"><i class="fa fa-{{ page.icon | slugify }}"></i> <span>{{ page.title }}</span></a>
-                        </li>
-                        {% endif %}
-                        {% endfor %}
-                    </ul>
-                </nav>
+                {% include header.html %}
             </div>
         </header>
         <main class="content">
@@ -43,9 +15,7 @@
         </main>
         <footer class="footer">
             <div class="inner-wrapper">
-                <section class="bottom">
-                    <p>All rights reserved &copy 2019</p>
-                </section>
+                {% include footer.html %}
             </div>
         </footer>
     </div>
