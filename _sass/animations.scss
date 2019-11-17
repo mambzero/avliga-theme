@@ -1,4 +1,4 @@
-@keyframes post-thumb-hover {
+@keyframes post-thumb-image {
     0% {
         width: 101%;
     }
@@ -13,5 +13,26 @@
     }
     100% {
         width: 105%;
+    }
+}
+
+@keyframes post-thumb-title {
+    100% {
+        color: #000;
+    }
+}
+
+@keyframes post-thumb-shadow {  
+    25% {
+        box-shadow: 0 0 0.35em rgba(0,0,0,0.6);
+    }
+    50% {
+        box-shadow: 0 0 0.4em rgba(0,0,0,0.7);
+    }
+    75% {
+        box-shadow: 0 0 0.45em rgba(0,0,0,0.8);
+    }
+    100% {
+        box-shadow: 0 0 0.5em rgba(0,0,0,0.9);
     }
 }
