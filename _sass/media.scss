@@ -34,4 +34,14 @@
             flex-direction: column;
         }
     }
+    .blog-post {
+        header {
+            h3 {
+                font-size: 1em;
+            }
+            time {
+                font-size: 0.55em;
+            }
+        }
+    }
 }
