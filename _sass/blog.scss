@@ -9,7 +9,8 @@
         overflow: hidden;
         position: relative;
         border-radius: 0.2em;
-        box-shadow: 0 0 0.3em rgba(0,0,0,0.5);
+        box-shadow: 0 0 0.3em $post-thumb-shadow-color;
+        background-color: $post-thumb-bg-color;
         .image {
             position: relative;
             overflow: hidden;
@@ -29,14 +30,12 @@
             transform: translate(-50%,-50%);
         }
         .title {
-            background: #000;
-            height: 100%;
-        }
-        .title h3 {
-            padding: 0.5em;
-            color: #fff;
-            font-size: 1em;
-            font-weight: normal;
+            h3 {
+                padding: 0.5em;
+                color: $post-thumb-title-color;
+                font-size: 1em;
+                font-weight: 600;
+            }
         }
         a {
             display: flex;
@@ -51,10 +50,17 @@
             font-size: 0.8em;
             i {
                 padding: 0.3em;
+                color: $post-thumb-title-color;
             }
         }
         &:hover .image img {
-            animation: post-thumb-hover 0.3s both;
+            animation: post-thumb-image 0.3s both;
+        }
+        &:hover .title h3, &:hover a i {
+            animation: post-thumb-title 0.3s both;
+        }
+        &:hover {
+            animation: post-thumb-shadow 0.3s both;
         }
     }
     &:before, &:after{
