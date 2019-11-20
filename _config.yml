@@ -53,6 +53,10 @@ plugins:
 #
 exclude:
   - README
+  - package.json
+  - node_modules
+  - gulpfile.js
+  - styles.scss
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
