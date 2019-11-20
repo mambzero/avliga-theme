@@ -2,7 +2,7 @@ let gulp = require('gulp'),
     sass = require('gulp-sass'),
     shell = require('gulp-shell');
 
-gulp.task('jekyll', shell.task(['bundle exec jekyll build --config _config.yml']));
+gulp.task('jekyll', shell.task(['bundle exec jekyll build --config']));
 
 gulp.task('sass', function() {
     return gulp
