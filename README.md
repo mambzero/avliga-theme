@@ -1,3 +1,3 @@
 # Avliga Theme
 
-generated with jekyll and gulp.
+generated with jekyll and gulp
