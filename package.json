@@ -1,0 +1,29 @@
+{
+  "name": "avliga-theme",
+  "version": "1.0.0",
+  "description": "Web template for Avliga Books",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "\\"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mambzero/avliga-theme.git"
+  },
+  "keywords": [
+    "avliga",
+    "books"
+  ],
+  "author": "mambzero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mambzero/avliga-theme/issues"
+  },
+  "homepage": "https://github.com/mambzero/avliga-theme#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-sass": "^4.0.2",
+    "gulp-shell": "^0.7.1"
+  }
+}
