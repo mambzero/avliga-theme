@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+html {
+  font: 16px/1.5 "Roboto", sans-serif; }
+
+body, form, table, button, input, textarea, select, option {
+  font: inherit; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", serif;
+  padding-bottom: 0.5em; }
+
+h1 {
+  font-size: 2.2em; }
+
+h2 {
+  font-size: 1.8em; }
+
+h3 {
+  font-size: 1.6em; }
+
+h4 {
+  font-size: 1.4em; }
+
+h5 {
+  font-size: 1.3em; }
+
+h6 {
+  font-size: 1.2em; }
+
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+  padding-top: 0.5em; }
+
+p, ul, ol {
+  padding-bottom: 1.5em; }
+
+blockquote {
+  padding: 0 2.5em;
+  border-left: 2px solid #999;
+  margin-bottom: 1.5em; }
+
+blockquote p {
+  font-style: italic; }
+
+blockquote p:last-child {
+  padding-bottom: 0; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+@keyframes post-thumb-image {
+  0% {
+    width: 101%; }
+  25% {
+    width: 102%; }
+  50% {
+    width: 103%; }
+  75% {
+    width: 104%; }
+  100% {
+    width: 105%; } }
+
+@keyframes post-thumb-title {
+  100% {
+    color: #000; } }
+
+@keyframes post-thumb-shadow {
+  25% {
+    box-shadow: 0 0 0.35em rgba(0, 0, 0, 0.6); }
+  50% {
+    box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.7); }
+  75% {
+    box-shadow: 0 0 0.45em rgba(0, 0, 0, 0.8); }
+  100% {
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.9); } }
+
+.inner-wrapper {
+  display: flex;
+  width: 80vw; }
+
+.site {
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh; }
+
+.header, .content, .footer {
+  display: flex;
+  justify-content: center; }
+
+.header {
+  background-color: #fbda00;
+  font-size: 0.8em; }
+  .header .inner-wrapper {
+    justify-content: space-between;
+    align-items: center; }
+  .header .brand {
+    display: flex;
+    z-index: 10; }
+    .header .brand .logo {
+      display: block;
+      background: #333;
+      margin-bottom: -0.5em;
+      border-bottom-left-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+      position: relative; }
+    .header .brand .logo img {
+      width: 10em;
+      padding: 0.5em; }
+    .header .brand .logo a {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+    .header .brand h1.title {
+      color: #333;
+      margin-left: 0.5em;
+      padding-bottom: 0;
+      display: flex;
+      align-items: center;
+      font-size: 1.2em; }
+  .header .nav ul {
+    display: flex;
+    padding-bottom: 0; }
+  .header .nav li {
+    display: block;
+    margin: 0 0.3em; }
+  .header .nav a, .header .toggle-menu-button {
+    display: block;
+    color: #333;
+    padding: 0.8em 0.5em;
+    font-weight: 600; }
+    .header .nav a:hover, .header .toggle-menu-button:hover {
+      color: #000;
+      transition: 0.3s ease-in; }
+  .header .nav .toggle-menu-button {
+    display: none; }
+  .header .nav .toggle-menu-checkbox {
+    display: none; }
+
+.content {
+  flex-grow: 1;
+  padding: 1em; }
+  .content .inner-wrapper {
+    flex-direction: column; }
+
+.footer {
+  background-color: #333; }
+  .footer .bottom p {
+    padding: 1em 0;
+    color: #fff; }
+
+.blog {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  margin: 0 -1em; }
+  .blog .post-thumb {
+    flex: 1 0 18em;
+    margin: 1em;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.2em;
+    box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.5);
+    background-color: #fff; }
+    .blog .post-thumb .image {
+      position: relative;
+      overflow: hidden; }
+    .blog .post-thumb .image:after {
+      display: block;
+      content: '';
+      padding-top: calc( (9 / 16) * 100%); }
+    .blog .post-thumb .image img {
+      display: block;
+      width: 101%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .blog .post-thumb .title h3 {
+      padding: 0.5em;
+      color: #333;
+      font-size: 1em;
+      font-weight: 600; }
+    .blog .post-thumb a {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      color: #fff;
+      font-size: 0.8em; }
+      .blog .post-thumb a i {
+        padding: 0.3em;
+        color: #333; }
+    .blog .post-thumb:hover .image img {
+      animation: post-thumb-image 0.3s both; }
+    .blog .post-thumb:hover .title h3, .blog .post-thumb:hover a i {
+      animation: post-thumb-title 0.3s both; }
+    .blog .post-thumb:hover {
+      animation: post-thumb-shadow 0.3s both; }
+  .blog:before, .blog:after {
+    display: block;
+    content: '';
+    flex: 1 0 18em;
+    margin-left: 1em;
+    margin-right: 1em; }
+  .blog:before {
+    order: 1000; }
+
+.blog-post {
+  position: relative; }
+  .blog-post header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden; }
+    .blog-post header h3 {
+      padding: 0.5em;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      z-index: 1; }
+    .blog-post header img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto; }
+    .blog-post header time {
+      color: #fff;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 0.5em;
+      font-size: 0.8em; }
+    .blog-post header:before, .blog-post header:after {
+      display: block;
+      content: ''; }
+    .blog-post header:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1; }
+    .blog-post header:after {
+      padding-bottom: calc( (3 / 9) * 100%); }
+  .blog-post section {
+    margin-top: 1.5em; }
+
+@media screen and (max-width: 976px) {
+  .inner-wrapper {
+    width: 100%; }
+  .header, .footer {
+    padding: 0 1em; } }
+
+@media screen and (max-width: 648px) {
+  .header {
+    position: relative; }
+    .header .nav .toggle-menu-button {
+      display: block; }
+    .header .nav ul {
+      display: none;
+      padding: 0.5em;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fbda00;
+      z-index: 10; }
+      .header .nav ul li a {
+        font-size: 1.2em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em; }
+    .header .nav > .toggle-menu-checkbox:checked + ul {
+      display: flex;
+      flex-direction: column; }
+  .blog-post header h3 {
+    font-size: 1em; }
+  .blog-post header time {
+    font-size: 0.55em; } }
