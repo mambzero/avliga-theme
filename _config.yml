@@ -53,6 +53,9 @@ plugins:
 #
 exclude:
   - README
+  - package.json
+  - package-lock.json
+  - node_modules/
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
