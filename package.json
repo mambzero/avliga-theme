@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/mambzero/avliga-theme#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "^4.0.2",
