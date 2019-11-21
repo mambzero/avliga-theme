@@ -1,7 +1,7 @@
 let gulp = require('gulp'),
     sass = require('gulp-sass'),
     shell = require('gulp-shell'),
-    browserSync = require('browser-sync'),
+    browserSync = require('browser-sync').create(),
     deploy = require('gulp-gh-pages');
 
 const root = '_site';
@@ -14,7 +14,7 @@ gulp.task('sass', function() {
     .src(['./_assets/sass/styles.scss'])
     .pipe(sass({includePaths: ['./_sass/']}))
     .pipe(gulp.dest('./_site/assets/css'))
-    .pipe( browserSync.stream({ match: '**/*.css' }));
+    .pipe(browserSync.stream({ match: '**/*.css' }));
 });
 
 gulp.task('watch', function() {
