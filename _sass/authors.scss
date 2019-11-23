@@ -1,0 +1,118 @@
+.authors {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    margin: 0 -1em;
+    .author {
+        flex: $author-items;
+        margin: 1em;
+        overflow: hidden;
+        position: relative;
+        border-radius: 0.2em;
+        box-shadow: 0 0 0.3em $post-thumb-shadow-color;
+        background-color: $post-thumb-bg-color;
+        .image {
+            position: relative;
+            overflow: hidden;
+        }
+        .image:after {
+            display: block;
+            content: '';
+            padding-top: $author-image-ratio;
+        }
+        .image img {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            height: auto;
+        }
+        .title {
+            h3 {
+                padding: 0.5em;
+                color: $post-thumb-title-color;
+                font-size: 1em;
+                font-weight: 600;
+            }
+        }
+        a {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            color: #fff;
+            font-size: 0.8em;
+            i {
+                padding: 0.3em;
+                color: $post-thumb-title-color;
+            }
+        }
+        &:hover .image img {
+            animation: post-thumb-image 0.3s both;
+        }
+        &:hover .title h3, &:hover a i {
+            animation: post-thumb-title 0.3s both;
+        }
+        &:hover {
+            animation: post-thumb-shadow 0.3s both;
+        }
+    }
+    &:before, &:after{
+        display: block;
+        content: '';
+        flex: $author-items;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    &:before {
+        order: 1000;
+    }
+}
+
+.single-author {
+    display: flex;
+    flex-direction: column;
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        > * {
+            flex-shrink: 0;
+            flex-basis: 10em;
+        }
+    }
+    .title {
+        padding: 0 1em;
+        flex-grow: 2;
+        blockquote {
+            margin-bottom: 0;
+        }
+    }
+    .image {
+        position: relative;
+        overflow: hidden;
+        flex-grow: 1;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        &:after {
+            display: block;
+            content: '';
+            padding-top: $post-image-ratio;
+        }
+    }
+    .text {
+        padding-top: 1em;
+    }
+}

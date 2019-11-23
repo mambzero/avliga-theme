@@ -5,6 +5,14 @@
     .header, .footer {
         padding: 0 1em;
     }
+    .single-author  {
+        .title {
+            padding: 1em 0;
+        }
+        .image {
+            flex-basis: 100%;
+        }
+    }
 }
 
 @media screen and (max-width: 648px) {
