@@ -1,0 +1,9 @@
+---
+index: 1
+layout: single-author
+categories: authors
+---
+
+{% assign author_index = page.index | minus: 1 %}
+
+{{ site.data.authors.root.author[author_index].text }}
