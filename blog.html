@@ -11,15 +11,16 @@ icon: blog
 {% assign posts = site.data.posts.rss.channel.item %}
 
 <div class="blog">
-{% for post in posts %}
+{% for post in site.posts %}
+    {% assign post_index = post.index | minus: 1 %}
     <article class="post-thumb">
         <section class="image">
-            <img src="{{ post.enclosure._url }}" alt="{{ post.title }}"> 
+            <img src="{{ posts[post_index].enclosure._url }}" alt="{{ posts[post_index].title }}"> 
         </section>
         <section class="title">
-            <h3>{{ post.title }}</h3>
+            <h3>{{ posts[post_index].title }}</h3>
         </section>
-        <a href="{{ site.baseurl }}/blog/{{ post.created.__text | date: '%Y/%m/%d' }}/blog-post-{{ forloop.index }}.html" class="read-more"><i class="fa fa-angle-double-right"></i></a>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more"><i class="fa fa-angle-double-right"></i></a>
     </article>
 {% endfor %}
 </div>
