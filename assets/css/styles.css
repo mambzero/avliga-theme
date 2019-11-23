@@ -48,7 +48,7 @@ p, ul, ol {
   padding-bottom: 1.5em; }
 
 blockquote {
-  padding: 0 2.5em;
+  padding: 0 1.5em;
   border-left: 2px solid #999;
   margin-bottom: 1.5em; }
 
@@ -166,6 +166,101 @@ a {
     padding: 1em 0;
     color: #fff; }
 
+.authors {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  margin: 0 -1em; }
+  .authors .author {
+    flex: 1 0 18em;
+    margin: 1em;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.2em;
+    box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.5);
+    background-color: #fff; }
+    .authors .author .image {
+      position: relative;
+      overflow: hidden; }
+    .authors .author .image:after {
+      display: block;
+      content: '';
+      padding-top: calc( (9 / 16) * 100%); }
+    .authors .author .image img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto; }
+    .authors .author .title h3 {
+      padding: 0.5em;
+      color: #333;
+      font-size: 1em;
+      font-weight: 600; }
+    .authors .author a {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      color: #fff;
+      font-size: 0.8em; }
+      .authors .author a i {
+        padding: 0.3em;
+        color: #333; }
+    .authors .author:hover .image img {
+      animation: post-thumb-image 0.3s both; }
+    .authors .author:hover .title h3, .authors .author:hover a i {
+      animation: post-thumb-title 0.3s both; }
+    .authors .author:hover {
+      animation: post-thumb-shadow 0.3s both; }
+  .authors:before, .authors:after {
+    display: block;
+    content: '';
+    flex: 1 0 18em;
+    margin-left: 1em;
+    margin-right: 1em; }
+  .authors:before {
+    order: 1000; }
+
+.single-author {
+  display: flex;
+  flex-direction: column; }
+  .single-author header {
+    display: flex;
+    flex-wrap: wrap; }
+    .single-author header > * {
+      flex-shrink: 0;
+      flex-basis: 10em; }
+  .single-author .title {
+    padding: 0 1em;
+    flex-grow: 2; }
+    .single-author .title blockquote {
+      margin-bottom: 0; }
+  .single-author .image {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1; }
+    .single-author .image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .single-author .image:after {
+      display: block;
+      content: '';
+      padding-top: calc( (9 / 16) * 100%); }
+  .single-author .text {
+    padding-top: 1em; }
+
 .blog {
   display: flex;
   flex-flow: row wrap;
@@ -280,7 +375,11 @@ a {
   .inner-wrapper {
     width: 100%; }
   .header, .footer {
-    padding: 0 1em; } }
+    padding: 0 1em; }
+  .single-author .title {
+    padding: 1em 0; }
+  .single-author .image {
+    flex-basis: 100%; } }
 
 @media screen and (max-width: 648px) {
   .header {
