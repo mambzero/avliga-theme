@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+    <div class="site">
+        <header class="header">
+            <div class="inner-wrapper">
+                {% include header.html %}
+            </div>
+        </header>
+        <main class="content">
+            <div class="inner-wrapper">
+                {% assign author_index = page.index | minus: 1 %}
+                {% assign author = site.data.authors.root.author[author_index] %}
+                <artcle class="single-author">
+                    <header>
+                        <div class="image">
+                            <img src="{{ author.image }}" alt="{{ post.name }}">
+                        </div>
+                        <div class="title">
+                            <h3>{{ author.name }}</h3>
+                            <blockquote>
+                                <p>{{ author.description }}</p>
+                            </blockquote>
+                        </div>
+                    </header>
+                    <section class="text">
+                        {{ content }}
+                    </section>
+                </artcle>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="inner-wrapper">
+                {% include footer.html %}
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
