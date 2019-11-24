@@ -1,0 +1,9 @@
+---
+index: 8
+layout: single-book
+categories: books
+---
+
+{% assign book_index = page.index | minus: 1 %}
+
+{{ site.data.books.root.book[book_index].text }}
