@@ -42,6 +42,14 @@
             flex-direction: column;
         }
     }
+    .single-book {
+        > section:nth-child(1) {
+            flex-basis: 100%;
+        }
+        > section:nth-child(2) {
+            padding: 0;
+        }
+    }
     .blog-post {
         header {
             h3 {

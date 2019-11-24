@@ -63,16 +63,7 @@
             animation: post-thumb-shadow 0.3s both;
         }
     }
-    &:before, &:after{
-        display: block;
-        content: '';
-        flex: $author-items;
-        margin-left: 1em;
-        margin-right: 1em;
-    }
-    &:before {
-        order: 1000;
-    }
+    @include dummy($author-items);
 }
 
 .single-author {
