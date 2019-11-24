@@ -16,7 +16,7 @@ icon: user-edit
     {% assign author_index = author.index | minus: 1 %}
     <article class="author">
         <section class="image">
-            <img src="{{ authors_data[author_index].image }}" alt="{{ authors_data[author_index].name }}"> 
+            <img src="{{ authors_data[author_index].image }}" alt="{{ authors_data[author_index].name }}">
         </section>
         <section class="title">
             <h3>{{ authors_data[author_index].name }}</h3>
@@ -24,4 +24,5 @@ icon: user-edit
         <a href="{{ author.url }}" class="read-more"><i class="fa fa-user-edit"></i></a>
     </article>
 {% endfor %}
+    <div class="dummy"></div>
 </div>
