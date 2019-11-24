@@ -1,0 +1,17 @@
+@mixin dummy($flex) {
+    &:before, &:after{
+        display: block;
+        content: '';
+        flex: $flex;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    &:before {
+        order: 1000;
+    }
+    .dummy {
+        flex: $flex;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
