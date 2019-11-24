@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+    <div class="site">
+        <header class="header">
+            <div class="inner-wrapper">
+                {% include header.html %}
+            </div>
+        </header>
+        <main class="content">
+            <div class="inner-wrapper">
+                {% assign book_index = page.index | minus: 1 %}
+                {% assign book = site.data.books.root.book[book_index] %}
+                <div class="single-book">
+                    <section>
+                        <div class="image">
+                            <img src="{{ book.image }}" alt="{{ book.title }}">
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="title">
+                            <h3>{{ book.title }}</h3>
+                        </div>
+                        <div class="text">
+                            {{ content }}
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="inner-wrapper">
+                {% include footer.html %}
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
