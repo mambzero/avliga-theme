@@ -85,10 +85,12 @@
     }
     > section:nth-child(1) {
         flex-grow: 1;
+        padding-right: 1em;
     }
     > section:nth-child(2) {
-        padding: 0 1em;
+        padding: 0.5em 1em;
         flex-grow: 4;
+        @include single-card($post-thumb-shadow-color);
     }
     .image img {
         width: 100%;
