@@ -9,8 +9,6 @@ icon: book
 {% assign books_data = site.data.books.root.book %}
 {% assign books = site.books | sort: 'index' |  reverse %}
 
-<h2>Books</h2>
-
 <div class="books">
 {% for book in books %}
     {% assign book_index = book.index | minus: 1 %}

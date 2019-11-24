@@ -9,8 +9,6 @@ icon: user-edit
 {% assign authors_data = site.data.authors.root.author %}
 {% assign authors = site.authors | sort: "index" %}
 
-<h2>Authors</h2>
-
 <div class="authors">
 {% for author in authors %}
     {% assign author_index = author.index | minus: 1 %}
