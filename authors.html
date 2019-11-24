@@ -21,7 +21,7 @@ icon: user-edit
         <section class="title">
             <h3>{{ authors_data[author_index].name }}</h3>
         </section>
-        <a href="{{ author.url }}" class="read-more"><i class="fa fa-user-edit"></i></a>
+        <a href="{{ site.baseurl }}{{ author.url }}" class="read-more"><i class="fa fa-user-edit"></i></a>
     </article>
 {% endfor %}
     <div class="dummy"></div>
