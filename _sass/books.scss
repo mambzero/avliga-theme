@@ -108,6 +108,9 @@
         background-color: $header-bg;
         color: #333;
         border-radius: 0.3em;
+        i {
+            margin-right: 0.5em;
+        }
         &:hover {
             color: #000;
             box-shadow: 0 0 0.2em rgba(0,0,0,0.7);

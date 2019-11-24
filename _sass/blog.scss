@@ -68,6 +68,8 @@
 
 .blog-post {
     position: relative;
+    flex-grow: 1;
+    @include single-card($post-thumb-shadow-color);
     header {
         display: flex;
         flex-wrap: wrap;
@@ -119,6 +121,6 @@
         }
     }
     section {
-        margin-top: 1.5em;
+        padding: 1em;
     }
 }

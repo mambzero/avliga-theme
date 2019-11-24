@@ -15,3 +15,9 @@
         margin-right: 1em;
     }
 }
+
+@mixin single-card($shadow-color) {
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0.3em $shadow-color;
+}

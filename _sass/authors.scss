@@ -69,6 +69,8 @@
 .single-author {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    @include single-card($post-thumb-shadow-color);
     header {
         display: flex;
         flex-wrap: wrap;
@@ -78,7 +80,7 @@
         }
     }
     .title {
-        padding: 0 1em;
+        padding: 0.5em 1em;
         flex-grow: 2;
         blockquote {
             margin-bottom: 0;
@@ -104,6 +106,6 @@
         }
     }
     .text {
-        padding-top: 1em;
+        padding: 1em;
     }
 }
