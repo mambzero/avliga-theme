@@ -1,0 +1,117 @@
+.books  {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1em;
+    .book {
+        display: flex;
+        flex-direction: column;
+        flex: $book-items;
+        margin: 1em;
+        padding: 0.5em;
+        background-color: #fff;
+        box-shadow: 0 0 0.2em $post-thumb-shadow-color;
+        border-radius: 0.3em;
+        position: relative;
+        .small-buttons {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            a {
+                padding: 0.2em;
+                i {
+                    color: $post-thumb-shadow-color;
+                }
+            }
+            a.fav {
+                i:hover { 
+                    color: red;
+                    transition: 0.3s ease-in;
+                }
+            }
+        }
+        .image {
+            position: relative;
+            overflow: hidden;
+        }
+        .image:after {
+            display: block;
+            content: '';
+            padding-top: $book-image-ratio;
+        }
+        .image img {
+            display: block;
+            height: 90%;
+            width: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .title {
+            font-size: 0.55em;
+            text-align: center;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            h3 {
+                padding: 0.8em 0;
+                a {
+                    color: #04a;
+                    &:hover {
+                        color: #27c;
+                        transition: color 0.3s ease-in;
+                    }
+                }
+            }
+        }
+        .price {
+            text-align: center;
+            font-size: 0.85em;
+
+        }
+    }
+    @include dummy($book-items);
+}
+
+.single-book {
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+        flex-shrink: 0;
+        flex-basis: 10em;
+    }
+    > section:nth-child(1) {
+        flex-grow: 1;
+    }
+    > section:nth-child(2) {
+        padding: 0 1em;
+        flex-grow: 4;
+    }
+    .image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    a.add-to-cart {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.70em;
+        margin: 1em 0;
+        padding: 1em 1.5em;
+        background-color: $header-bg;
+        color: #333;
+        border-radius: 0.3em;
+        &:hover {
+            color: #000;
+            box-shadow: 0 0 0.2em rgba(0,0,0,0.7);
+            transition: 0.3s ease-in;
+        }
+    }
+}
