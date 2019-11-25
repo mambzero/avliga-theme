@@ -1,8 +1,8 @@
 @media screen and (max-width: 976px)  {
-    .inner-wrapper {
+    .inner-wrapper, .header .page-header .text-wrapper .text, .header .page-header .title-wrapper .title  {
         width: $layout-full-width;
     }
-    .header, .footer {
+    .header .inner-wrapper, .header .page-header .text-wrapper .text, .footer, .header .page-header .title-wrapper .title {
         padding: 0 1em;
     }
     .single-author  {
