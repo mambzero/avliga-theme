@@ -69,7 +69,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                h2 {
+                h1, h2, p {
                     color: #fff;
                 }
             }
@@ -77,9 +77,9 @@
         .title-wrapper {
             display: flex;
             justify-content: center;
-            background-image:  linear-gradient(90geg, rgba(33,33,33,0.2), $bg-color);
+            align-items: center;
+            padding-top: 2em;
             .title {
-                padding-top: 2em;
                 width: $layout-width;
             }
         }
