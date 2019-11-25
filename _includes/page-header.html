@@ -1,0 +1,25 @@
+{% if page.image %}
+<div class="image">
+    <img src="{{ site.data.images[page.image] }}" alt="image">
+</div>
+<div class="text-wrapper">
+    <div class="text">
+        {% if page.title == 'Home' %}
+        <h1>{{ site.title }}</h1>
+        {% else %}
+        <h2>{{ page.title }}</h2>
+        {% endif %}
+        {% if page.description %}
+        <p>{{ page.description }}</p>
+        {% endif %}
+    </div>
+</div>
+{% else %}
+{% if page.title %}
+<div class="title-wrapper">
+    <div class="title">
+        <h2>{{ page.title }}</h2>
+    </div>
+</div>
+{% endif %}
+{% endif %}
