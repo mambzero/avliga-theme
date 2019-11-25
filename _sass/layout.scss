@@ -50,10 +50,10 @@
             &:after {
                 display: block;
                 content: '';
-                padding-top: 20%;
+                padding-top: $header-image-ratio;
             } 
         }
-        h2 {
+        h1, h2, p {
             padding-bottom: 0;
         }
         .text-wrapper {
@@ -69,6 +69,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-direction: column;
                 h1, h2, p {
                     color: #fff;
                 }
