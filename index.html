@@ -10,4 +10,49 @@ image: home-image
 home-page: true
 ---
 
-<h2>Home page</h2>
+{% assign books_data = site.data.books.root.book %}
+{% assign books = site.books | sort: 'index' |  reverse %}
+
+<h3 class="section-title">Latest Editions</h3>
+
+<section class="books">
+{% for book in books limit: 12 %}
+    {% assign book_index = book.index | minus: 1 %}
+    <div class="book">
+        <div class="small-buttons">
+            <a href="#" class="fav"><i class="fa fa-heart"></i></a>
+        </div>
+        <div class="image">
+            <img src="{{ books_data[book_index].image }}" alt="{{ books_data[book_index].title }}">
+        </div>
+        <div class="title">
+            <h3><a href="{{ site.baseurl }}{{ book.url }}">{{ books_data[book_index].title }}</a></h3>
+        </div>
+        <div class="price">{{ books_data[book_index].price }}</div>
+        <div class="buttons">
+            <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+        </div>
+    </div>
+{% endfor %}
+    <div class="dummy"></div>
+</section>
+
+{% assign posts = site.data.posts.rss.channel.item %}
+
+<h3 class="section-title">Latests Posts</h3>
+
+<section class="blog">
+{% for post in site.posts limit: 6 %}
+    {% assign post_index = post.index | minus: 1 %}
+    <article class="post-thumb">
+        <section class="image">
+            <img src="{{ posts[post_index].enclosure._url }}" alt="{{ posts[post_index].title }}"> 
+        </section>
+        <section class="title">
+            <h3>{{ posts[post_index].title }}</h3>
+        </section>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more"><i class="fa fa-angle-double-right"></i></a>
+    </article>
+{% endfor %}
+    <div class="dummy"></div>
+</section>
