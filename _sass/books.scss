@@ -79,6 +79,7 @@
 .single-book {
     display: flex;
     flex-wrap: wrap;
+    @include single-card($post-thumb-shadow-color);
     > * {
         flex-shrink: 0;
         flex-basis: 10em;
@@ -90,7 +91,6 @@
     > section:nth-child(2) {
         padding: 0.5em 1em;
         flex-grow: 4;
-        @include single-card($post-thumb-shadow-color);
     }
     .image img {
         width: 100%;
@@ -119,4 +119,8 @@
             transition: 0.3s ease-in;
         }
     }
+}
+
+.buttons.align-left {
+    justify-content: flex-start;
 }
