@@ -588,22 +588,6 @@ a {
 
 @media screen and (max-width: 768px) {
   .content section.books .book, .content section.blog .post-thumb {
-    flex: 1 0 40%; }
-    .content section.books .book:before, .content section.books .book:after, .content section.blog .post-thumb:before, .content section.blog .post-thumb:after {
-      display: block;
-      content: '';
-      flex: 1 0 40%;
-      margin-left: 1em;
-      margin-right: 1em; }
-    .content section.books .book:before, .content section.blog .post-thumb:before {
-      order: 1000; }
-    .content section.books .book .dummy, .content section.blog .post-thumb .dummy {
-      flex: 1 0 40%;
-      margin-left: 1em;
-      margin-right: 1em; } }
-
-@media screen and (max-width: 768px) {
-  .content section.books .book, .content section.blog .post-thumb {
     flex: 1 0 40%; } }
 
 @media screen and (max-width: 648px) {
@@ -637,7 +621,19 @@ a {
 
 @media screen and (min-width: 500px) and (max-width: 768px) {
   .books .book {
-    flex: 1 0 40%; } }
+    flex: 1 0 40%; }
+    .books .book:before, .books .book:after {
+      display: block;
+      content: '';
+      flex: 1 0 40%;
+      margin-left: 1em;
+      margin-right: 1em; }
+    .books .book:before {
+      order: 1000; }
+    .books .book .dummy {
+      flex: 1 0 40%;
+      margin-left: 1em;
+      margin-right: 1em; } }
 
 @media screen and (max-width: 360px) {
   html {
