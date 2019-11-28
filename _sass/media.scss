@@ -29,14 +29,6 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    .content {
-        section.books .book, section.blog .post-thumb {
-            flex: 1 0 40%;
-        }
-    }
-}
-
 @media screen and (max-width: 648px) {
     .header {
         position: relative;
@@ -87,6 +79,7 @@
 @media screen and (min-width: 500px) and (max-width: 768px) {
     .books .book {
         flex: 1 0 40%;
+        @include dummy(1 0 40%);
     }
 }
 
