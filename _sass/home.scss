@@ -3,4 +3,10 @@
         padding: 0.5em 0;
         font-size: 1em;
     }
+    section.books .book, section.blog .post-thumb {
+        flex: 1 0 20%;
+    }
+    section.blog .post-thumb .title h3 {
+        font-size: 0.8em;
+    }
 }
