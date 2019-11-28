@@ -16,7 +16,7 @@ home-page: true
 <h3 class="section-title">Latest Editions</h3>
 
 <section class="books">
-{% for book in books limit: 12 %}
+{% for book in books limit: 4 %}
     {% assign book_index = book.index | minus: 1 %}
     <div class="book">
         <div class="small-buttons">
@@ -34,7 +34,6 @@ home-page: true
         </div>
     </div>
 {% endfor %}
-    <div class="dummy"></div>
 </section>
 
 {% assign posts = site.data.posts.rss.channel.item %}
@@ -42,7 +41,7 @@ home-page: true
 <h3 class="section-title">Latests Posts</h3>
 
 <section class="blog">
-{% for post in site.posts limit: 6 %}
+{% for post in site.posts limit: 4 %}
     {% assign post_index = post.index | minus: 1 %}
     <article class="post-thumb">
         <section class="image">
@@ -54,5 +53,4 @@ home-page: true
         <a href="{{ site.baseurl }}{{ post.url }}" class="read-more"><i class="fa fa-angle-double-right"></i></a>
     </article>
 {% endfor %}
-    <div class="dummy"></div>
 </section>
