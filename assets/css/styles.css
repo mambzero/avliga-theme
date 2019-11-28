@@ -622,18 +622,18 @@ a {
 @media screen and (min-width: 500px) and (max-width: 768px) {
   .books .book {
     flex: 1 0 40%; }
-    .books .book:before, .books .book:after {
-      display: block;
-      content: '';
-      flex: 1 0 40%;
-      margin-left: 1em;
-      margin-right: 1em; }
-    .books .book:before {
-      order: 1000; }
-    .books .book .dummy {
-      flex: 1 0 40%;
-      margin-left: 1em;
-      margin-right: 1em; } }
+  .books:before, .books:after {
+    display: block;
+    content: '';
+    flex: 1 0 40%;
+    margin-left: 1em;
+    margin-right: 1em; }
+  .books:before {
+    order: 1000; }
+  .books .dummy {
+    flex: 1 0 40%;
+    margin-left: 1em;
+    margin-right: 1em; } }
 
 @media screen and (max-width: 360px) {
   html {
