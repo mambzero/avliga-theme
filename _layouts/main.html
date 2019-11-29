@@ -7,7 +7,7 @@
             <div class="inner-wrapper">
                 {% include header.html %}
             </div>
-            {% if page.image or page.title %}
+            {% if page.image or page.title and page.show-title %}
             <div class="page-header">
                 {% include page-header.html %}
             </div>
