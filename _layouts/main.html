@@ -7,9 +7,11 @@
             <div class="inner-wrapper">
                 {% include header.html %}
             </div>
+            {% if page.image or page.title %}
             <div class="page-header">
                 {% include page-header.html %}
             </div>
+            {% endif %}
         </header>
         <main class="content">
             <div class="inner-wrapper">
