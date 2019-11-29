@@ -1,0 +1,98 @@
+.contacts-wrapper {
+    @include single-card($post-thumb-shadow-color);
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin: 1em 0;
+    > * {
+        flex: 1 0 100%;
+    }
+    .map {
+        position: relative;
+        overflow: hidden;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+        &:after {
+            display: block;
+            content: '';
+            padding-top: 20%;
+        }
+    }
+    .title {
+        padding: 0.5em 1em;
+        background-color: #333;
+        color: #fff;
+        font-weight: normal;
+    }
+    .contacts {
+        display: flex;
+        flex-wrap: wrap;
+        > * {
+            flex: 1 0 50%;
+            padding: 1em;
+        }
+        .list {
+            ul {
+                padding-bottom: 0;
+            }
+            li {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 1em 0;
+                padding: 1em;
+                span {
+                    font-size: 1.1em;
+                    font-weight: 600;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                }
+            }
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-grow: 0;
+                flex-shrink: 0;
+                margin-right: 1em;
+                background-color: #333;
+                color: $header-bg;
+                border-radius: 50%;
+                font-size: 2em;
+                width: 2em;
+                height: 2em;
+            }
+        }
+        .form {
+            form {
+                > * {
+                    display: block;
+                    margin: 1em 0;
+                }
+                input[type="email"], textarea {
+                    width: 100%;
+                    padding: 0.5em;
+                }
+                button {
+                    padding: 0.5em 1em;
+                    background-color: #333;
+                    color: $header-bg;
+                    border: none;
+                    border-radius: 0.3em;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #000;
+                        box-shadow: 0 0 0.3em $post-thumb-shadow-color;
+                        transition: 0.3s ease-in;
+                    }
+                    i {
+                        margin-right: 1em;
+                    }
+                }
+            }
+        }
+    }
+ }

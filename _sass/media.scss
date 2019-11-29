@@ -27,6 +27,11 @@
             flex: 1 0 40%;
         }
     }
+    .contacts-wrapper .contacts {
+        > * {
+            flex: 1 0 100%;
+        }
+    }
 }
 
 @media screen and (max-width: 648px) {
