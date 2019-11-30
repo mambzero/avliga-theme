@@ -66,10 +66,15 @@
             }
         }
         .form {
+            padding: 1em 2em;
             form {
                 > * {
                     display: block;
                     margin: 1em 0;
+                }
+                legend {
+                    font-size: 1.2em;
+                    font-weight: bold;
                 }
                 input[type="email"], textarea {
                     width: 100%;
