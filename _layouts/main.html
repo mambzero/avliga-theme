@@ -8,7 +8,7 @@
                 {% include header.html %}
             </div>
             {% if page.image or page.title and page.show-text %}
-            <div class="page-header {{ page.title | slugify }}">
+            <div class="page-header {{ page.title | slugify }}-header">
                 {% include page-header.html %}
             </div>
             {% endif %}
