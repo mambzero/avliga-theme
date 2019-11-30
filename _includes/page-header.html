@@ -2,6 +2,7 @@
 <div class="image">
     <img src="{{ site.data.images[page.image] }}" alt="image">
 </div>
+{% if page.show-text %}
 <div class="text-wrapper">
     <div class="text">
         {% if page.title == 'Home' %}
@@ -14,8 +15,9 @@
         {% endif %}
     </div>
 </div>
+{% endif %}
 {% else %}
-{% if page.title %}
+{% if page.title and page.show-text %}
 <div class="title-wrapper">
     <div class="title">
         <h2>{{ page.title }}</h2>
