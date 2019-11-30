@@ -1,0 +1,36 @@
+.header {
+    .page-header.about {
+        .image {
+            padding-top: 2em;
+            &:before {
+                background-color: transparent;
+            }
+            &:after {
+                padding-top: 25%;
+            }
+        }
+    }
+}
+
+.content .about {
+    &-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -1em;
+    }
+    .title {
+        text-align: center;
+    }
+    .article {
+        @include single-card($post-thumb-shadow-color);
+        margin: 1em;
+        padding: 1em;
+        flex: 1 0 20em;
+        max-width: 60em;
+        h3 {
+            border-bottom: 3px solid $header-bg;
+            margin-bottom: 1em;
+        }
+    }
+}
