@@ -86,6 +86,12 @@
             }
         }
     }
+    .header .page-header .image:after {
+        padding-top: 40%;
+    }
+    .blog-post header:after {
+        padding-bottom: 50%;
+    }
 }
 
 @media screen and (min-width: 500px) and (max-width: 768px) {
@@ -118,23 +124,26 @@
 }
 
 @media screen and (max-width: 360px) {
-    .content {
-        section.info .info-list {
-            ul {
-                flex-basis: 100%;
-                text-align: center;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 360px) {
     html {
         font-size: 14px;
     }
     .content {
         section.books .book, section.blog .post-thumb {
             flex: 1 0 18em;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .content {
+        section.info .info-list {
+            li {
+                flex-grow: 1;
+            }
+            ul {
+                flex-basis: 100%;
+                text-align: center;
+            }
         }
     }
 }
