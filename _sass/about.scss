@@ -1,5 +1,5 @@
 .header {
-    .page-header.about {
+    .page-header.about-header {
         .image {
             padding-top: 2em;
             &:before {
@@ -12,7 +12,7 @@
     }
 }
 
-.content .about {
+.about {
     &-content {
         display: flex;
         flex-wrap: wrap;
