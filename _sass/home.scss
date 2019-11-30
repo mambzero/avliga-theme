@@ -9,4 +9,57 @@
     section.blog .post-thumb .title h3 {
         font-size: 0.8em;
     }
+    section.info {
+        margin: 1em -1em;
+        ul {
+            padding-bottom: 0;
+        }
+        .info-list {
+            display: flex;
+            flex-wrap: nowrap;
+            > li {
+                @include single-card($post-thumb-shadow-color);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                flex-grow: 1;
+                margin: 0 1em;
+                padding: 1em;
+                .icon {
+                    flex-grow: 1;
+                    display: flex;
+                    justify-content: center;
+                    padding: 0.5em 1em;
+                    i {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-grow: 0;
+                        flex-shrink: 0;
+                        background-color: #333;
+                        color: $header-bg;
+                        border-radius: 50%;
+                        font-size: 1.8em;
+                        width: 2.4em;
+                        height: 2.4em;
+                    }
+                }
+                ul {
+                    flex-grow: 3;
+                    li {
+                        h3, p {
+                            padding-bottom: 0.3em;
+                        }
+                        h3 {
+                            font-size: 1.2em;
+                        }
+                        p {
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

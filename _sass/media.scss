@@ -18,6 +18,16 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+    .content {
+        section.info .info-list {
+            ul {
+                text-align: center;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .content {
         section.books .book, section.blog .post-thumb {
@@ -84,6 +94,37 @@
         flex: 1 0 40%;
         }
         @include dummy(1 0 40%);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        section.info {
+            margin-top: 0;
+            margin-bottom: 0;
+            .info-list {
+                flex-wrap: wrap;
+                > li {
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                    flex-basis: 100%;
+                }
+                ul {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .content {
+        section.info .info-list {
+            ul {
+                flex-basis: 100%;
+                text-align: center;
+            }
+        }
     }
 }
 
