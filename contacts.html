@@ -4,10 +4,6 @@ title: Contacts
 permalink: /contacts/
 order: 6
 icon: phone
-phone: 088XXXXXXX
-email: avliga@avliga.bg
-address: София 1505, ул. Васил Друмев 36, ет. 3
-map: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.312792551913!2d23.348508814466292!3d42.69709722174445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85845e6f7e25%3A0xf6ac0cbe51e17745!2z0YPQuy4g4oCe0JLQsNGB0LjQuyDQlNGA0YPQvNC10LLigJwgMzYsIDE1MDUg0J7QsdC-0YDQuNGJ0LUsINCh0L7RhNC40Y8!5e0!3m2!1sbg!2sbg!4v1575053489609!5m2!1sbg!2sbg
 ---
 
 <div class="contacts-wrapper">
@@ -20,15 +16,15 @@ map: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.312792551913!2d2
             <ul>
                 <li>
                     <i class="fa fa-phone fa-fw"></i>
-                    <span>{{ page.phone }}</span>
+                    <span>{{ site.data.contacts.phone }}</span>
                 </li>
                 <li>
                     <i class="fa fa-at fa-fw"></i>
-                    <span>{{ page.email }}</span>
+                    <span>{{ site.data.contacts.email }}</span>
                 </li>
                 <li>
                     <i class="fa fa-map-marker-alt fa-fw"></i>
-                    <span>{{ page.address }}</span>
+                    <span>{{ site.data.contacts.address }}</span>
                 </li>
             </ul>
         </div>
