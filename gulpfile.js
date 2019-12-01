@@ -21,7 +21,7 @@ gulp.task('sass', function() {
 
 gulp.task('html-beautify', function() {
     return gulp.src('./'+root+'/**/*.html')
-    .pipe(htmlBeautify({indent_with_tabs: true}))
+    .pipe(htmlBeautify())
     .pipe(removeEmptyLines())
     .pipe(gulp.dest('./'+root+'/'));
 });
