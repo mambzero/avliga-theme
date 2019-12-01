@@ -224,14 +224,41 @@ a {
     flex-direction: column; }
 
 .footer {
-  background-color: #333; }
+  background-color: #333;
+  color: #fff; }
+  .footer .inner-wrapper {
+    flex-wrap: wrap; }
+  .footer .top, .footer .bottom {
+    flex: 1 0 100%;
+    padding: 1em 0; }
+  .footer .top {
+    display: flex;
+    flex-wrap: wrap; }
+    .footer .top-item {
+      flex: 1 0 10em; }
+      .footer .top-item h5 {
+        color: #fbda00;
+        text-transform: uppercase;
+        font-size: 1em; }
+      .footer .top-item ul {
+        display: inline-block;
+        padding-bottom: 0; }
+      .footer .top-item li {
+        margin: 0.2em 0; }
+      .footer .top-item a {
+        display: block;
+        padding: 0.1em;
+        color: inherit; }
+      .footer .top-item i {
+        margin-right: 0.3em; }
   .footer .bottom p {
-    padding: 1em 0;
-    color: #fff; }
+    padding: 0; }
 
 .content .section-title {
+  margin-bottom: 0.8em;
   padding: 0.5em 0;
-  font-size: 1em; }
+  font-size: 1em;
+  border-bottom: 3px solid #333; }
 
 .content section.books .book, .content section.blog .post-thumb {
   flex: 1 0 20%; }
@@ -616,7 +643,7 @@ a {
   .blog-post section {
     padding: 1em; }
 
-.header .page-header.about-header .image {
+.header .page-header.about-header {
   padding-top: 2em; }
   .header .page-header.about-header .image:before {
     background-color: transparent; }
@@ -701,26 +728,31 @@ a {
       font-size: 2em;
       width: 2em;
       height: 2em; }
-    .contacts-wrapper .contacts .form form > * {
-      display: block;
-      margin: 1em 0; }
-    .contacts-wrapper .contacts .form form input[type="email"], .contacts-wrapper .contacts .form form textarea {
-      width: 100%;
-      padding: 0.5em; }
-    .contacts-wrapper .contacts .form form button {
-      padding: 0.5em 1em;
-      background-color: #333;
-      color: #fbda00;
-      border: none;
-      border-radius: 0.3em;
-      text-transform: uppercase;
-      cursor: pointer; }
-      .contacts-wrapper .contacts .form form button:hover {
-        background-color: #000;
-        box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.5);
-        transition: 0.3s ease-in; }
-      .contacts-wrapper .contacts .form form button i {
-        margin-right: 1em; }
+    .contacts-wrapper .contacts .form {
+      padding: 1em 2em; }
+      .contacts-wrapper .contacts .form form > * {
+        display: block;
+        margin: 1em 0; }
+      .contacts-wrapper .contacts .form form legend {
+        font-size: 1.2em;
+        font-weight: bold; }
+      .contacts-wrapper .contacts .form form input[type="email"], .contacts-wrapper .contacts .form form textarea {
+        width: 100%;
+        padding: 0.5em; }
+      .contacts-wrapper .contacts .form form button {
+        padding: 0.5em 1em;
+        background-color: #333;
+        color: #fbda00;
+        border: none;
+        border-radius: 0.3em;
+        text-transform: uppercase;
+        cursor: pointer; }
+        .contacts-wrapper .contacts .form form button:hover {
+          background-color: #000;
+          box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.5);
+          transition: 0.3s ease-in; }
+        .contacts-wrapper .contacts .form form button i {
+          margin-right: 1em; }
 
 @media screen and (min-width: 1400px) {
   .inner-wrapper, .header .page-header .text-wrapper .text, .header .page-header .title-wrapper .title {
@@ -742,7 +774,11 @@ a {
   .content section.books .book, .content section.blog .post-thumb {
     flex: 1 0 40%; }
   .contacts-wrapper .contacts > * {
-    flex: 1 0 100%; } }
+    flex: 1 0 100%; }
+  .site .footer .top-item {
+    flex-basis: 50%; }
+    .site .footer .top-item:nth-child(3), .site .footer .top-item:nth-child(4) {
+      margin-top: 1em; } }
 
 @media screen and (max-width: 648px) {
   .header {
@@ -771,7 +807,11 @@ a {
   .blog-post header h3 {
     font-size: 1em; }
   .blog-post header time {
-    font-size: 0.55em; } }
+    font-size: 0.55em; }
+  .header .page-header .image:after {
+    padding-top: 40%; }
+  .blog-post header:after {
+    padding-bottom: 50%; } }
 
 @media screen and (min-width: 500px) and (max-width: 768px) {
   .books .book {
@@ -803,12 +843,14 @@ a {
         text-align: left; } }
 
 @media screen and (max-width: 360px) {
-  .content section.info .info-list ul {
-    flex-basis: 100%;
-    text-align: center; } }
-
-@media screen and (max-width: 360px) {
   html {
     font-size: 14px; }
   .content section.books .book, .content section.blog .post-thumb {
     flex: 1 0 18em; } }
+
+@media screen and (max-width: 320px) {
+  .content section.info .info-list li {
+    flex-grow: 1; }
+  .content section.info .info-list ul {
+    flex-basis: 100%;
+    text-align: center; } }
