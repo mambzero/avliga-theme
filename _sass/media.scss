@@ -39,6 +39,12 @@
             flex: 1 0 100%;
         }
     }
+    .site .footer .top-item {
+        flex-basis: 50%;
+        &:nth-child(3), &:nth-child(4) {
+            margin-top: 1em;
+        }
+    }
 }
 
 @media screen and (max-width: 648px) {
