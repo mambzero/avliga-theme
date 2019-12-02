@@ -192,6 +192,9 @@
                 display: block;
                 padding: 0.1em;
                 color: inherit;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
             i {
                 margin-right: 0.3em;
