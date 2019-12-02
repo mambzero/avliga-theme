@@ -1,16 +1,16 @@
-.header {
-    .page-header.about-header {
-        padding-top: 2em;
-        .image {
-            &:before {
-                background-color: transparent;
-            }
-            &:after {
-                padding-top: 25%;
-            }
-        }
-    }
-}
+// .header {
+//     .page-header.about-header {
+//         padding-top: 2em;
+//         .image {
+//             &:before {
+//                 background-color: transparent;
+//             }
+//             &:after {
+//                 padding-top: 25%;
+//             }
+//         }
+//     }
+// }
 
 .about {
     &-content {
@@ -18,9 +18,6 @@
         flex-wrap: wrap;
         justify-content: center;
         margin: 0 -1em;
-    }
-    .title {
-        text-align: center;
     }
     .article {
         @include single-card($post-thumb-shadow-color);
