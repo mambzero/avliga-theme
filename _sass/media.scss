@@ -11,11 +11,6 @@
     .header .inner-wrapper, .header .page-header .text-wrapper .text, .footer, .header .page-header .title-wrapper .title {
         padding: 0 1em;
     }
-    .single-author  {
-        .image {
-            flex-basis: 100%;
-        }
-    }
 }
 
 @media screen and (max-width: 900px) {
@@ -24,6 +19,17 @@
             ul {
                 text-align: center;
             }
+        }
+    }
+    .single-author  {
+        header {
+            padding: 0;
+        }
+        .title {
+            padding-top: 0.5em;
+        }
+        .image {
+            flex-basis: 100%;
         }
     }
 }
@@ -76,6 +82,7 @@
     }
     .single-book {
         > section:nth-child(1) {
+            padding: 0;
             flex-basis: 100%;
         }
         > section:nth-child(2) {
