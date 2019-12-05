@@ -387,6 +387,7 @@ a {
 .single-book {
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
   background-color: #fff;
   border: 1px solid #fff;
   box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.5); }
@@ -394,12 +395,13 @@ a {
     flex-shrink: 0;
     flex-basis: 10em; }
   .single-book > section:nth-child(1) {
-    padding: 1em 0 0 1em;
+    padding: 1em 0 1em 1em;
     flex-grow: 1; }
   .single-book > section:nth-child(2) {
     padding: 0.5em 1em 0.5em 1.2em;
     flex-grow: 4; }
   .single-book .image img {
+    display: block;
     width: 100%;
     height: auto; }
 
