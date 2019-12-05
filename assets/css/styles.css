@@ -389,6 +389,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
+  margin: 0.8em 0;
   background-color: #fff;
   border: 1px solid #fff;
   box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.5); }
@@ -498,6 +499,7 @@ a {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  margin: 0.8em 0;
   background-color: #fff;
   border: 1px solid #fff;
   box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.5); }
@@ -601,6 +603,7 @@ a {
 .blog-post {
   position: relative;
   flex-grow: 1;
+  margin: 1em 0;
   background-color: #fff;
   border: 1px solid #fff;
   box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.5); }
@@ -736,11 +739,14 @@ a {
       .contacts-wrapper .contacts .form form input[type="email"], .contacts-wrapper .contacts .form form textarea {
         width: 100%;
         padding: 0.5em; }
+      .contacts-wrapper .contacts .form form textarea {
+        resize: none; }
       .contacts-wrapper .contacts .form form button {
         padding: 0.5em 1em;
         background-color: #333;
         color: #fbda00;
         border: none;
+        outline: none;
         border-radius: 0.3em;
         text-transform: uppercase;
         cursor: pointer; }
