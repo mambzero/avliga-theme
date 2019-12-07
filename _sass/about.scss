@@ -3,6 +3,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        //align-items: flex-start;
         margin: 0 -1em;
     }
     .article {
@@ -14,6 +15,58 @@
         h3 {
             border-bottom: 3px solid $header-bg;
             margin-bottom: 1em;
+        }
+    }
+    .article:first-child h3 {
+        background-image: url('https://avliga.bg/img/avliga.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+    }
+    .article:last-child {
+        position: relative;
+        h3:after {
+            font-family: "Font Awesome 5 Free";
+            content: '\f0c0';
+            font-weight: 900;
+            display: inline-block;
+            position: absolute;
+            top:0;
+            right: 1rem;
+            font-size: 2em;
+        }
+    }
+}
+
+.about {
+    .the-team {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .employee {
+            position: relative;
+            overflow: hidden;
+            img {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 120%;
+                height: auto;
+            }
+            &:after {
+                display: block;
+                content: '';
+                padding-top: 75%;
+            }
+        }
+        .employee:first-child {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        .employee:last-child {
+            grid-row: 3 / span 2;
+            grid-column: 3;
         }
     }
 }
