@@ -54,19 +54,30 @@
                 width: 120%;
                 height: auto;
             }
+            &:before {
+                display: block;
+                content: 'ok';
+                background-color: red;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+            }
             &:after {
                 display: block;
                 content: '';
                 padding-top: 75%;
             }
-        }
-        .employee:first-child {
-            grid-row: span 2;
-            grid-column: span 2;
-        }
-        .employee:last-child {
-            grid-row: 3 / span 2;
-            grid-column: 3;
+            &:first-child {
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+            &:last-child {
+                grid-row: 3 / span 2;
+                grid-column: 3;
+            }
         }
     }
 }
