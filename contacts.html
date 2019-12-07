@@ -15,12 +15,16 @@ icon: phone
         <div class="list">
             <ul>
                 <li>
-                    <i class="fa fa-phone fa-fw"></i>
-                    <span>{{ site.data.contacts.phone }}</span>
+                    <a href="tel:{{ site.data.contacts.phone }}">
+                        <i class="fa fa-phone fa-fw"></i>
+                        <span>{{ site.data.contacts.phone }}</span>
+                    </a>
                 </li>
                 <li>
-                    <i class="fa fa-at fa-fw"></i>
-                    <span>{{ site.data.contacts.email }}</span>
+                    <a href="mailto:{{ site.data.contacts.email }}">
+                        <i class="fa fa-at fa-fw"></i>
+                        <span>{{ site.data.contacts.email }}</span>
+                    </a>
                 </li>
                 <li>
                     <i class="fa fa-map-marker-alt fa-fw"></i>

@@ -31,9 +31,9 @@
     <div class="top-item">
         <h5>Contacts</h5>
         <ul>
-            <li><a href="#"><i class="fa fa-phone fa-fw"></i><span>{{ site.data.contacts.phone }}</span></a></li>
-            <li><a href="#"><i class="fa fa-envelope fa-fw"></i><span>{{ site.data.contacts.email }}</span></a></li>
-            <li><a href="#"><i class="fa fa-map-marker-alt fa-fw"></i><span>{{ site.data.contacts.address }}</span></a></li>
+            <li><a href="tel:{{ site.data.contacts.phone }}"><i class="fa fa-phone fa-fw"></i><span>{{ site.data.contacts.phone }}</span></a></li>
+            <li><a href="mailto:{{ site.data.contacts.email }}"><i class="fa fa-envelope fa-fw"></i><span>{{ site.data.contacts.email }}</span></a></li>
+            <li><i class="fa fa-map-marker-alt fa-fw"></i><span>{{ site.data.contacts.address }}</span></li>
         </ul>
     </div>
 </section>
