@@ -8,3 +8,4 @@ node_modules
 _config_dev.yml
 package-lock.json
 Gemfile.lock
+debug.log
