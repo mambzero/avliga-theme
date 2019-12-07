@@ -12,7 +12,7 @@
             <div class="inner-wrapper">
                 {% assign book_index = page.index | minus: 1 %}
                 {% assign book = site.data.books.root.book[book_index] %}
-                <div class="single-book">
+                <div class="single-book single-view">
                     <section>
                         <div class="image">
                             <img src="{{ book.image }}" alt="{{ book.title }}">

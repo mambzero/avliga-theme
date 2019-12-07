@@ -69,7 +69,6 @@
 .blog-post {
     position: relative;
     flex-grow: 1;
-    margin: 1em 0;
     @include single-card($post-thumb-shadow-color);
     header {
         display: flex;

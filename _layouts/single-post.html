@@ -12,7 +12,7 @@
             <div class="inner-wrapper">
                 {% assign page_index = page.index | minus: 1 %}
                 {% assign post = site.data.posts.rss.channel.item[page_index] %}
-                <article class="blog-post">
+                <article class="blog-post single-view">
                     <header>
                         <h3>{{ post.title }}</h3>
                         <img src="{{ post.enclosure._url }}" alt="{{ post.title }}">

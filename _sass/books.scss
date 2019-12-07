@@ -80,7 +80,6 @@
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
-    margin: 0.8em 0;
     @include single-card($post-thumb-shadow-color);
     > * {
         flex-shrink: 0;
