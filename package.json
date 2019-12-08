@@ -23,6 +23,9 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cssbeautify": "^2.0.0",
+    "gulp-csso": "^4.0.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-html-beautify": "^1.0.1",
     "gulp-remove-empty-lines": "^0.1.0",
