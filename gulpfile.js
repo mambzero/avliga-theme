@@ -1,9 +1,12 @@
 let gulp = require('gulp'),
     sass = require('gulp-sass'),
+    csso = require("gulp-csso"),
+    cssbeautify = require('gulp-cssbeautify'),
+    autoprefixer = require("gulp-autoprefixer"),
     shell = require('gulp-shell'),
     browserSync = require('browser-sync').create(),
     deploy = require('gulp-gh-pages'),
-    htmlBeautify = require('gulp-html-beautify'),
+    htmlbeautify = require('gulp-html-beautify'),
     removeEmptyLines = require('gulp-remove-empty-lines');
 
 const root = '_site';
@@ -15,15 +18,23 @@ gulp.task('sass', function() {
     return gulp
     .src(['./_assets/sass/styles.scss'])
     .pipe(sass({includePaths: ['./_sass/']}))
+    .pipe(autoprefixer())
+    .pipe(cssbeautify())
     .pipe(gulp.dest('./'+root+'/assets/css'))
     .pipe(browserSync.stream({ match: '**/*.css' }));
 });
 
 gulp.task('html-beautify', function() {
     return gulp.src('./'+root+'/**/*.html')
-    .pipe(htmlBeautify())
+    .pipe(htmlbeautify())
     .pipe(removeEmptyLines())
     .pipe(gulp.dest('./'+root+'/'));
+});
+
+gulp.task('csso', function() {
+    return gulp.src('./'+root+'/assets/css/**/*.css')
+        .pipe(csso())
+        .pipe(gulp.dest('./'+root+'/assets/css/'));
 });
 
 gulp.task('deploy-gh-pages', function() {
