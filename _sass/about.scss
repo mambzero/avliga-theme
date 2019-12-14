@@ -3,7 +3,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        //align-items: flex-start;
+        align-items: flex-start;
         margin: 0 -1em;
     }
     .article {
@@ -14,7 +14,7 @@
         max-width: 60em;
         h3 {
             border-bottom: 3px solid $header-bg;
-            margin-bottom: 1em;
+            margin-bottom: 1rem;
         }
     }
     .article:first-child h3 {
