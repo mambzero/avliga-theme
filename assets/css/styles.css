@@ -1105,6 +1105,8 @@ a {
     flex-wrap: wrap;
     -webkit-box-pack: center;
     justify-content: center;
+    -webkit-box-align: start;
+    align-items: flex-start;
     margin: 0 -1em;
 }
 
@@ -1121,7 +1123,7 @@ a {
 
 .about .article h3 {
     border-bottom: 3px solid #fbda00;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 .about .article:first-child h3 {
