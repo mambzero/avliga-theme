@@ -53,14 +53,14 @@
     }
 }
 
-@media screen and (max-width: 648px) {
+@media screen and (max-width: 700px) {
     .header {
         position: relative;
         .nav {
             .toggle-menu-button {
                 display: block;
             }
-            ul {
+            ul:first-of-type {
                 display: none;
                 padding: 0.5em;
                 position: absolute;
@@ -80,6 +80,9 @@
             flex-direction: column;
         }
     }
+}
+
+@media screen and (max-width: 648px) {
     .single-book {
         > section:nth-child(1) {
             padding: 0;

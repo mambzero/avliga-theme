@@ -126,6 +126,7 @@
         align-items: center;
         flex-grow: 1;
         position: relative;
+        user-select: none;
     }
     .nav ul {
         display: flex;
@@ -135,7 +136,7 @@
         display: block;
         margin: 0 0.3em;
     }
-    .nav a, .toggle-menu-button {
+    .nav ul li > a, .toggle-menu-button, .toggle-cart-button {
         display: block;
         color: #333;
         padding: 0.8em 0.5em;
@@ -146,10 +147,15 @@
             transition: 0.3s ease-in;
         }
     }
-    .nav .toggle-menu-button {
-        display: none;
+    .nav {
+        .toggle-menu-button, .toggle-menu-checkbox, .toggle-cart-checkbox, .cart-dropdown {
+            display: none;
+        }
+        .toggle-cart-checkbox:checked + .cart-dropdown {
+            display: block;
+        }
     }
-    .nav .toggle-menu-checkbox {
+    .nav .cart-dropdown {
         display: none;
     }
 }
