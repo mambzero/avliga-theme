@@ -20,4 +20,11 @@
         {% endif %}
         {% endfor %}
     </ul>
+    <ul>
+        <li>
+            <label for="toggle-cart" class="toggle-cart-button"><i class="fa fa-shopping-cart fa-fw"></i></label>
+            <input id="toggle-cart" class="toggle-cart-checkbox" type="checkbox">
+            {% include cart-dropdown.html %}
+        </li>
+    </ul>
 </nav>
