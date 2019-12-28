@@ -7,7 +7,7 @@
 <nav class="nav">
     <label for="toggle-menu-button" class="toggle-menu-button"><i class="fa fa-bars"></i></label>
     <input id="toggle-menu-button" class="toggle-menu-checkbox" type="checkbox">
-    <ul>
+    <ul class="main-menu">
         {% assign pages = site.pages | sort: 'order' %}
         {% for page in pages %}
         {% if page.title %}
@@ -25,6 +25,11 @@
             <label for="toggle-cart" class="toggle-cart-button"><i class="fa fa-shopping-cart fa-fw"></i></label>
             <input id="toggle-cart" class="toggle-cart-checkbox" type="checkbox">
             {% include cart-dropdown.html %}
+        </li>
+        <li>
+            <label for="toggle-user" class="toggle-user-button"><i class="fa fa-user fa-fw"></i></label>
+            <input id="toggle-user" class="toggle-user-checkbox" type="checkbox">
+            {% include login-dropdown.html %}
         </li>
     </ul>
 </nav>
