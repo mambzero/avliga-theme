@@ -136,7 +136,7 @@
         display: block;
         margin: 0 0.3em;
     }
-    .nav ul li > a, .toggle-menu-button, .toggle-cart-button {
+    .nav ul li > a, .toggle-menu-button, .toggle-cart-button, .toggle-user-button {
         display: block;
         color: #333;
         padding: 0.8em 0.5em;
@@ -148,14 +148,21 @@
         }
     }
     .nav {
-        .toggle-menu-button, .toggle-menu-checkbox, .toggle-cart-checkbox, .cart-dropdown {
+        .toggle-menu-button, 
+        .toggle-menu-checkbox, 
+        .toggle-cart-checkbox, 
+        .toggle-user-checkbox, 
+        .cart-dropdown, 
+        .user-dropdown {
             display: none;
         }
-        .toggle-cart-checkbox:checked + .cart-dropdown {
+        .toggle-cart-checkbox:checked + .cart-dropdown,
+        .toggle-user-checkbox:checked + .login-dropdown {
             display: block;
         }
     }
-    .nav .cart-dropdown {
+    .nav .cart-dropdown,
+    .nav .login-dropdown {
         display: none;
     }
 }
