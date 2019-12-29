@@ -1501,6 +1501,80 @@ a {
     transition: 0.3s ease-in;
 }
 
+.checkout .form form {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5em;
+}
+
+.checkout .form form fieldset {
+    -webkit-box-flex: 1;
+    flex: 1 0 50%;
+    border: none;
+    margin: 1em 0;
+    padding: 0.5em;
+}
+
+.checkout .form form fieldset legend {
+    font-size: 1.2em;
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.checkout .form form label {
+    margin-bottom: 0.5em;
+    padding: 0.5em 0;
+}
+
+.checkout .form form input[type="text"], .checkout .form form input[type="email"], .checkout .form form select {
+    display: block;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    width: 100%;
+    height: 3em;
+}
+
+.checkout .form form textarea {
+    display: block;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    width: 100%;
+    resize: none;
+}
+
+.checkout .form form .submit-area {
+    flex-basis: 100%;
+    margin: 0.5em 0;
+}
+
+.checkout .form form .submit-area button {
+    padding: 0.5em 1.5em;
+    color: #333;
+    background-color: #fbda00;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 0.3em;
+    outline: none;
+    border: none;
+}
+
+.checkout .form form .submit-area button i {
+    margin-right: 0.5em;
+}
+
+.checkout .form form .submit-area button:hover {
+    color: #fbda00;
+    background-color: #333;
+    box-shadow: 0 0 0.3em rgba(251, 218, 0, 0.7);
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+}
+
 .login-dropdown {
     padding: 1em;
     position: absolute;
@@ -1792,6 +1866,10 @@ a {
 
     .cart .cart-items .cart-item .cart-item-remove {
         padding: 1em;
+    }
+
+    .checkout .form form fieldset {
+        flex-basis: 100%;
     }
 }
 
