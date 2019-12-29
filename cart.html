@@ -5,4 +5,55 @@ order: 7
 icon: shopping-cart
 ---
 
-<h2>Cart</h2>
+{% assign books_data = site.data.books.root.book %}
+{% assign cart_items = site.books | sample: 3 %}
+{% assign total = 0 %}
+{% assign quantity = 0 %}
+
+<div class="cart">
+    <div class="cart-items">
+        {% for book in cart_items %}
+        {% assign book_index = book.index | minus: 1 %}
+        {% assign sub_total = books_data[book_index].price | times: forloop.index %}
+        {% assign total = total | plus: sub_total %}
+        {% assign quantity = quantity | plus: forloop.index %}
+        <div class="cart-item">
+            <div class="cart-item-image">
+                <a href="{{ site.baseurl }}{{ book.url }}">
+                    <img src="{{ books_data[book_index].image }}" alt="{{ book.title }}">
+                </a>
+            </div>
+            <div class="cart-item-data">
+                <div class="cart-item-title">
+                    <h4><a href="{{ site.baseurl }}{{ book.url }}">{{ books_data[book_index].title }}</a></h4>
+                </div>
+                <div class="cart-item-price">
+                    <span>{{ books_data[book_index].price }}</span>
+                </div>
+                <div class="cart-item-quantity">
+                    <input type="number" name="qunatity" value="{{ forloop.index }}">
+                </div>
+                <div class="cart-item-subtotal">
+                    <span>{{ sub_total | round: 2 }}</span>
+                </div>
+            </div>
+            <div class="cart-item-remove">
+                <a href="#"><i class="fa fa-times-circle"></i></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="cart-total">
+        <div class="cart-total-quantity">
+            <span>Qty:</span>
+            <span>{{ quantity }}</span>
+        </div>
+        <div class="cart-total-amount">
+            <span>Total:</span>
+            <span>{{ total | round: 2 }}</span>
+        </div>
+    </div>
+    <div class="cart-buttons">
+        <a href="{{ site.baseurl }}/order" class="checkout-btn"><i class="fa fa-credit-card"></i>Checkout</a>
+    </div>
+</div>
