@@ -1,0 +1,133 @@
+---
+layout: main
+permalink: /order/
+order: 8
+icon: credit-card
+---
+
+{% assign books_data = site.data.books.root.book %}
+{% assign cart_items = site.books | sample: 3 %}
+{% assign total = 0 %}
+{% assign quantity = 0 %}
+
+<div class="cart">
+    <div class="cart-items">
+        {% for book in cart_items %}
+        {% assign book_index = book.index | minus: 1 %}
+        {% assign sub_total = books_data[book_index].price | times: forloop.index %}
+        {% assign total = total | plus: sub_total %}
+        {% assign quantity = quantity | plus: forloop.index %}
+        <div class="cart-item">
+            <div class="cart-item-image">
+                <a href="{{ site.baseurl }}{{ book.url }}">
+                    <img src="{{ books_data[book_index].image }}" alt="{{ book.title }}">
+                </a>
+            </div>
+            <div class="cart-item-data">
+                <div class="cart-item-title">
+                    <h4><a href="{{ site.baseurl }}{{ book.url }}">{{ books_data[book_index].title }}</a></h4>
+                </div>
+                <div class="cart-item-price">
+                    <span>{{ books_data[book_index].price }}</span>
+                </div>
+                <div class="cart-item-quantity">
+                    <input type="number" name="qunatity" value="{{ forloop.index }}">
+                </div>
+                <div class="cart-item-subtotal">
+                    <span>{{ sub_total | round: 2 }}</span>
+                </div>
+            </div>
+            <div class="cart-item-remove">
+                <a href="#"><i class="fa fa-times-circle"></i></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="cart-total">
+        <div class="cart-total-quantity">
+            <span>Qty:</span>
+            <span>{{ quantity }}</span>
+        </div>
+        <div class="cart-total-amount">
+            <span>Total:</span>
+            <span>{{ total | round: 2 }}</span>
+        </div>
+    </div>
+</div>
+
+<div class="checkout">
+    <div class="form">
+        <form action="#" method="post">
+
+            <fieldset class="personal-info">
+                <legend>Pesonal info</legend>
+                <label>First Name</label>
+                <input type="text" name="name">
+                <label>Family Name</label>
+                <input type="text" name="fname">
+                <label>Email</label>
+                <input type="email" name="email">
+                <label>Phone</label>
+                <input type="text" name="phone">
+            </fieldset>
+
+            <fieldset class="address">
+                <legend>Address</legend>
+                <label>Region</label>
+                <select name="region">
+                    <option>Select</option>
+                </select>
+                <label>City</label>
+                <select name="city">
+                    <option>Select</option>
+                </select>
+                <label>Post Code</label>
+                <input type="text" name="postcode">
+                <label>Address</label>
+                <input type="text" name="address">
+            </fieldset>
+
+            <fieldset class="delivery-method">
+                <legend>Delivery method</legend>
+                <div class="radio">
+                    <input type="radio" name="delivery-method" id="dm-1">
+                    <label for="dm-1">Delivery method 1</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="delivery-method" id="dm-2">
+                    <label for="dm-2">Delivery method 2</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="delivery-method" id="dm-3">
+                    <label for="dm-3">Delivery method 3</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="payment-method">
+                <legend>Payment method</legend>
+                <div class="radio">
+                    <input type="radio" name="payment-method" id="pm-1">
+                    <label for="pm-1">Payment method 1</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="payment-method" id="pm-2">
+                    <label for="pm-2">Payment method 2</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="payment-method" id="pm-3">
+                    <label for="pm-3">Payment method 3</label>
+                </div>
+            </fieldset>
+            
+            <fieldset class="additional-info">
+                <legend>Additional info</legend>
+                <textarea type="text" name="additional-info" rows="8"></textarea>
+            </fieldset>
+            
+            <fieldset class="submit-area">
+                <button type="submit"><i class="fa fa-credit-card"></i>Checkout</button>
+            </fieldset>
+
+        </form>
+    </div>
+</div>
