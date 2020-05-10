@@ -86,13 +86,16 @@
                     display: block;
                     margin: 1em 0;
                 }
-                legend {
+                h5 {
                     font-size: 1.2em;
                     font-weight: bold;
                 }
-                input[type="email"], textarea {
+                input, textarea {
                     width: 100%;
                     padding: 0.5em;
+                }
+                p {
+                    padding: 0;
                 }
                 textarea {
                     resize: none;
