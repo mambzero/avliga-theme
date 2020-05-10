@@ -1709,14 +1709,18 @@ a {
     margin: 1em 0;
 }
 
-.contacts-wrapper .contacts .form form legend {
+.contacts-wrapper .contacts .form form h5 {
     font-size: 1.2em;
     font-weight: bold;
 }
 
-.contacts-wrapper .contacts .form form input[type="email"], .contacts-wrapper .contacts .form form textarea {
+.contacts-wrapper .contacts .form form input, .contacts-wrapper .contacts .form form textarea {
     width: 100%;
     padding: 0.5em;
+}
+
+.contacts-wrapper .contacts .form form p {
+    padding: 0;
 }
 
 .contacts-wrapper .contacts .form form textarea {
