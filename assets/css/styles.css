@@ -766,8 +766,6 @@ a {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-flow: row wrap;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
     margin: 0 -1em;
 }
 
@@ -937,8 +935,6 @@ a {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-flow: row wrap;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
     margin: 0 -1em;
 }
 
