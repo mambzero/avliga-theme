@@ -1,0 +1,63 @@
+.checkout {
+    .form form {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -0.5em;
+        fieldset {
+            flex: 1 0 50%;
+            border: none;
+            margin: 1em 0;
+            padding: 0.5em;
+            legend {
+                font-size: 1.2em;
+                font-weight: 600;
+                border-bottom: 1px solid #000;
+                width: 100%;
+                margin-bottom: 0.5em;
+                padding-bottom: 0.5em;
+            }
+        }
+        label {
+            margin-bottom: 0.5em;
+            padding: 0.5em 0;
+        }
+        input[type="text"], input[type="email"], select {
+            display: block;
+            padding: 0.5em;
+            margin-bottom: 0.5em;
+            width: 100%;
+            height: 3em;
+        }
+        textarea {
+            display: block;
+            padding: 0.5em;
+            margin-bottom: 0.5em;
+            width: 100%;
+            resize: none;
+        }
+        .submit-area {
+            flex-basis: 100%;
+            margin: 0.5em 0;
+            button {
+                padding: 0.5em 1.5em;
+                color: #333;
+                background-color: $header-bg;
+                text-transform: uppercase;
+                font-size: 1em;
+                font-weight: 600;
+                border-radius: 0.3em;
+                outline: none;
+                border: none;
+                i {
+                    margin-right: 0.5em;
+                }
+                &:hover {
+                    color: $header-bg;
+                    background-color: #333;
+                    box-shadow: 0 0 0.3em rgba($header-bg,0.7);
+                    transition: 0.3s ease-in;
+                }
+            }
+        }
+    }
+}
