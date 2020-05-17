@@ -1,7 +1,6 @@
 .authors {
     display: flex;
     flex-flow: row wrap;
-    flex-grow: 1;
     margin: 0 -1em;
     .author {
         flex: $author-items;
