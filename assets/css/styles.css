@@ -1129,7 +1129,6 @@ a {
     padding: 1em;
     -webkit-box-flex: 1;
     flex: 1 0 20em;
-    max-width: 60em;
 }
 
 .about .article h3 {
@@ -1137,75 +1136,11 @@ a {
     margin-bottom: 1rem;
 }
 
-.about .article:first-child h3 {
+.about .article.about-section h3 {
     background-image: url("https://avliga.bg/img/avliga.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
-}
-
-.about .article:last-child {
-    position: relative;
-}
-
-.about .article:last-child h3:after {
-    font-family: "Font Awesome 5 Free";
-    content: '\f0c0';
-    font-weight: 900;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 1rem;
-    font-size: 2em;
-}
-
-.about .the-team {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.about .the-team .employee {
-    position: relative;
-    overflow: hidden;
-}
-
-.about .the-team .employee img {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 120%;
-    height: auto;
-}
-
-.about .the-team .employee:before {
-    display: block;
-    content: 'ok';
-    background-color: red;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.about .the-team .employee:after {
-    display: block;
-    content: '';
-    padding-top: 75%;
-}
-
-.about .the-team .employee:first-child {
-    grid-row: span 2;
-    grid-column: span 2;
-}
-
-.about .the-team .employee:last-child {
-    grid-row: 3 / span 2;
-    grid-column: 3;
 }
 
 .cart-items {
