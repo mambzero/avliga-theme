@@ -1,7 +1,7 @@
-.site-register {
+.split-section {
     display: flex;
     flex-wrap: wrap;
-    .register-form, .register-text {
+    > * {
         flex: 1 0 50%;
     }
 }

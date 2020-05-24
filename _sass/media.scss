@@ -112,13 +112,8 @@
             }
         }
     }
-    .site-login {
-        .login-form, .login-text {
-            flex: 1 0 100%;
-        }
-    }
-    .site-register {
-        .register-form, .register-text {
+    .split-section {
+        > * {
             flex: 1 0 100%;
         }
     }

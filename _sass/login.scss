@@ -7,11 +7,3 @@
     color: #333;
     z-index: 8;
 }
-
-.site-login {
-    display: flex;
-    flex-wrap: wrap;
-    .login-form, .login-text {
-        flex: 1 0 50%;
-    }
-}
