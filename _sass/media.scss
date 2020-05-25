@@ -116,6 +116,9 @@
         > * {
             flex: 1 0 100%;
         }
+        .max-50 {
+            max-width: unset;
+        }
     }
 }
 
