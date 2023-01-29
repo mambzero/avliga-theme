@@ -21,16 +21,16 @@
   },
   "homepage": "https://github.com/mambzero/avliga-theme#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.11",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-cssbeautify": "^2.0.1",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssbeautify": "^3.0.1",
     "gulp-csso": "^4.0.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-html-beautify": "^1.0.1",
     "gulp-remove-empty-lines": "^0.1.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-shell": "^0.7.1"
-  },
-  "dependencies": {}
+    "gulp-sass": "^5.1.0",
+    "gulp-shell": "^0.8.0",
+    "sass": "^1.57.1"
+  }
 }

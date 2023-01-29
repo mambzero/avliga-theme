@@ -1,5 +1,5 @@
 let gulp = require('gulp'),
-    sass = require('gulp-sass'),
+    sass = require('gulp-sass')(require('sass')),
     csso = require("gulp-csso"),
     cssbeautify = require('gulp-cssbeautify'),
     autoprefixer = require("gulp-autoprefixer"),
